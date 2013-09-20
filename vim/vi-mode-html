@@ -1,0 +1,66 @@
+" Function keys F1-F6
+map! #1 <h1>A</h1>4hi
+map! #2 <h2>A</h2>4hi
+map! #3 <h3>A</h3>4hi
+map! #4 <h4>A</h4>4hi
+map! #5 <h5>A</h5>4hi
+map! #6 <h6>A</h6>4hi
+map #1 I<h1>A</h1>4hi
+map #2 I<h2>A</h2>4hi
+map #3 I<h3>A</h3>4hi
+map #4 I<h4>A</h4>4hi
+map #5 I<h5>A</h5>4hi
+map #6 I<h6>A</h6>4hi
+
+" Alt-d inserts a description list item
+map! ä <dt><dd>kA 
+map ä i<dt><dd>kA 
+
+" Alt-a adds an anchor
+map! á <a href="http://"></a>3hi
+map á i<a href="http://"></a>3hi
+vmap á xi<a href=""></a>hhhhhhpf>a
+
+" Alt-i adds an inlined image
+map! é <img src="" alt="image">hi
+map é i<img src="" alt="image">hi
+
+" Alt-p adds a paragraph tag
+map! ð 0i<p>
+map ð 0i<p>
+
+" Alt-l adds a list item
+map! ì <li> 
+map ì i<li> 
+
+" Alt-r adds a horizontal rule
+map! ò 0i<hr>
+map ò 0i<hr>
+
+" Alt-t tt-ifies the selected text
+imap ô <tt></tt>hhhhi
+nmap ô i<tt></tt>hhhhi
+vmap ô xi<tt>pa</tt>
+
+" Alt-q &quot;-ifies the selected text
+imap ñ &quot;&quot;hhhhhi
+nmap ñ i&quot;&quot;hhhhhi
+vmap ñ xi&quot;pa&quot;
+
+" Alt-u inserts an UL
+" Alt-o inserts an OL
+map õ i<ul></ul>ko
+map ï i<ol></ol>ko
+map! õ <ul></ul>ko
+map! ï <ol></ol>ko
+
+" Alt-b inserts a <br>
+map â i<br>
+map! â <br>
+
+" Opening table, tr, td, th, and p insert the closing versions of the same
+iab <table> <table></table>kA
+iab <tr> <tr></tr>kA
+iab <td> <td></td>hhhhi
+iab <th> <th></th>hhhhi
+iab <p> <p></p>kA
