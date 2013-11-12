@@ -86,3 +86,8 @@ path=(~/bin /usr/local/bin /usr/games/bin /usr/local/share/python $path)
 export PATH
 
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:${PYTHONPATH}
+
+# Which robot to run in simulation
+#export ROBOT_TYPE=janky1
+export ROBOT_TYPE=mike
+
