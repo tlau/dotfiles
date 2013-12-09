@@ -47,6 +47,12 @@ alias bc='bc /Users/tlau/.bcrc'
 autoload -U compinit && compinit
 setopt EXTENDED_GLOB
 
+# global history
+# Append command to history just before it is executed, not when the shell exits
+setopt inc_append_history
+# retrieve history file each time history is requested
+setopt share_history
+
 
 # Obsolete stuff
 #export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib:/uns/lib:/scratch/tlau/mysql/lib/mysql:/scratch/tlau/lib
