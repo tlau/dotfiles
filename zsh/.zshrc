@@ -8,7 +8,8 @@ export CDPATH=.:/home/tlau
 # Less options
 export LESS=-erMMj3
 export LESSKEY=/home/tlau/.less
-export TZ=US/Pacific
+#export TZ=US/Pacific
+export TZ=America/Buenos_Aires
 export MAIL=/home/tlau/Maildir/
 
 # Filename completion
@@ -88,7 +89,7 @@ PROMPT='%m:%~$(git_super_status)%% '
 # Add nethack
 # Also add homebrew directories
 typeset -U path
-path=(~/bin /usr/local/bin /usr/games/bin /usr/local/share/python $path)
+path=(~/bin /usr/local/bin /usr/games/bin /usr/local/share/python /Users/tlau/apps/mongodb-osx-x86_64-2.5.3/bin $path)
 export PATH
 
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:${PYTHONPATH}
