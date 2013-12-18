@@ -8,6 +8,7 @@ export CDPATH=.:/home/tlau
 # Less options
 export LESS=-erMMj3
 export LESSKEY=/home/tlau/.less
+#export TZ=US/Pacific
 export TZ=America/Buenos_Aires
 export MAIL=/home/tlau/Maildir/
 
@@ -47,6 +48,12 @@ alias bc='bc /Users/tlau/.bcrc'
 autoload -U compinit && compinit
 setopt EXTENDED_GLOB
 
+# global history
+# Append command to history just before it is executed, not when the shell exits
+setopt inc_append_history
+# retrieve history file each time history is requested
+setopt share_history
+
 
 # Obsolete stuff
 #export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib:/uns/lib:/scratch/tlau/mysql/lib/mysql:/scratch/tlau/lib
@@ -82,7 +89,7 @@ PROMPT='%m:%~$(git_super_status)%% '
 # Add nethack
 # Also add homebrew directories
 typeset -U path
-path=(~/bin /usr/local/bin /usr/games/bin /usr/local/share/python $path)
+path=(~/bin /usr/local/bin /usr/games/bin /usr/local/share/python /Users/tlau/apps/mongodb-osx-x86_64-2.5.3/bin $path)
 export PATH
 
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:${PYTHONPATH}

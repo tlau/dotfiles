@@ -53,6 +53,7 @@ if __name__ == '__main__':
     link_in_home('bc/.bcrc', '.bcrc')
     link_in_home('zsh/.zshrc', '.zshrc')
     link_in_home('zsh', '.zsh')
+    link_in_home('synergy/synergy.conf', '.synergy.conf')
 #    link_in_home('roxterm', '.config/roxterm.sourceforge.net')
 
     # have ipython call my stuff on startup
