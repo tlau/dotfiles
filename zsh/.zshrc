@@ -37,7 +37,6 @@ alias ll='ls -l'
 alias wh='ps auxw | grep'
 alias m=make
 alias library='telnet -l leo nyplgate.nypl.org'
-alias history='fc -dl'
 alias kl='tail -30 ~/.gale/log/privlog'
 alias kll='less ~/.gale/log/privlog'
 
@@ -53,7 +52,10 @@ setopt EXTENDED_GLOB
 setopt inc_append_history
 # retrieve history file each time history is requested
 setopt share_history
-
+# Set the file used to store history
+export HISTFILE=~/.zsh_history
+export SAVEHIST=10000
+setopt APPEND_HISTORY
 
 # Obsolete stuff
 #export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib:/uns/lib:/scratch/tlau/mysql/lib/mysql:/scratch/tlau/lib
