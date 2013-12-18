@@ -8,7 +8,7 @@ export CDPATH=.:/home/tlau
 # Less options
 export LESS=-erMMj3
 export LESSKEY=/home/tlau/.less
-export TZ=US/Pacific
+export TZ=America/Buenos_Aires
 export MAIL=/home/tlau/Maildir/
 
 # Filename completion
