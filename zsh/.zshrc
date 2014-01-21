@@ -29,20 +29,11 @@ bindkey  down-history
 #stty erase '^H'
 
 # Aliases
-alias f=finger
-if [ "x$TERM" != "xtgtelnet" ]; then
-	alias ls='ls -FG'
-fi
 alias ll='ls -l'
 alias wh='ps auxw | grep'
 alias m=make
-alias library='telnet -l leo nyplgate.nypl.org'
-alias kl='tail -30 ~/.gale/log/privlog'
-alias kll='less ~/.gale/log/privlog'
-
-alias doman='nroff -man'
-
-alias bc='bc /Users/tlau/.bcrc'
+alias bc='bc ~/.bcrc'
+alias go=gnome-open
 
 autoload -U compinit && compinit
 setopt EXTENDED_GLOB
@@ -95,8 +86,4 @@ path=(~/bin /usr/local/bin /usr/games/bin /usr/local/share/python /Users/tlau/ap
 export PATH
 
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:${PYTHONPATH}
-
-# Which robot to run in simulation
-#export ROBOT_TYPE=janky1
-export ROBOT_TYPE=mike
 
