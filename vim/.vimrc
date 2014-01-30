@@ -177,3 +177,10 @@ filetype on
 imap  :wa
 map <F1> <Esc>
 set path=.,,**
+
+" To work more easily with wrapped lines
+noremap <buffer> <silent> k gk
+noremap <buffer> <silent> j gj
+noremap <buffer> <silent> 0 g0
+noremap <buffer> <silent> $ g$
+

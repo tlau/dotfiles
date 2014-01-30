@@ -16,7 +16,7 @@ export MAIL=/home/tlau/Maildir/
 export FIGNORE=aux
 
 # print to molly's printer
-export PRINTER=molly
+#export PRINTER=molly
 
 bindkey -v
 bindkey -a K history-beginning-search-backward
@@ -26,9 +26,11 @@ bindkey '[A' up-history
 bindkey '[B' down-history
 bindkey  up-history
 bindkey  down-history
+bindkey  history-incremental-pattern-search-backward
 #stty erase '^H'
 
 # Aliases
+alias ls='ls --color -F'
 alias ll='ls -l'
 alias wh='ps auxw | grep'
 alias m=make
@@ -40,13 +42,13 @@ setopt EXTENDED_GLOB
 
 # global history
 # Append command to history just before it is executed, not when the shell exits
-setopt inc_append_history
+setopt INC_APPEND_HISTORY
 # retrieve history file each time history is requested
-setopt share_history
+setopt SHARE_HISTORY
 # Set the file used to store history
 export HISTFILE=~/.zsh_history
 export SAVEHIST=10000
-setopt APPEND_HISTORY
+export HISTSIZE=10000
 
 # Obsolete stuff
 #export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib:/uns/lib:/scratch/tlau/mysql/lib/mysql:/scratch/tlau/lib
