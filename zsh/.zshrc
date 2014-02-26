@@ -8,8 +8,8 @@ export CDPATH=.:/home/tlau
 # Less options
 export LESS=-erMMj3
 export LESSKEY=/home/tlau/.less
-#export TZ=US/Pacific
-export TZ=America/Buenos_Aires
+export TZ=US/Pacific
+#export TZ=America/Buenos_Aires
 export MAIL=/home/tlau/Maildir/
 
 # Filename completion
@@ -29,6 +29,7 @@ bindkey  down-history
 #stty erase '^H'
 
 # Aliases
+alias ls='ls --color -F'
 alias ll='ls -l'
 alias wh='ps auxw | grep'
 alias m=make
@@ -87,3 +88,5 @@ export PATH
 
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:${PYTHONPATH}
 
+
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
