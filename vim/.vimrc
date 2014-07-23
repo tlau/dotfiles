@@ -112,6 +112,7 @@ autocmd FileType python       set sw=4 ts=4 sts=4 et
 autocmd bufnewfile 			*.html    	0r ~/.vim/template.html
 autocmd FileType html    	so ~/.vim/vi-mode-html
 autocmd bufenter                *.html      set sw=2 ts=2 et
+autocmd bufenter                *.css       set sw=2 ts=2 et
 " This doesn't work yet
 " autocmd BufWritePre,FileWritePre *.html		ms:1,20g/Last modification: /|normal f:lD:read !date^M:normal kJ
 

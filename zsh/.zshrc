@@ -4,7 +4,8 @@ export CVS_RSH=ssh
 export VISUAL=/usr/bin/vim
 export EDITOR=/usr/bin/vim
 export MHN=/home/tlau/Mail/mhn.defaults
-export CDPATH=.:/home/tlau
+# Interferes with catkin_make
+#export CDPATH=.:/home/tlau
 # Less options
 export LESS=-erMMj3
 export LESSKEY=/home/tlau/.less
@@ -83,10 +84,17 @@ PROMPT='%m:%~$(git_super_status)%% '
 # Add nethack
 # Also add homebrew directories
 typeset -U path
-path=(~/bin /usr/local/bin /usr/games/bin /usr/local/share/python /Users/tlau/apps/mongodb-osx-x86_64-2.5.3/bin $path)
+path=(~/bin /usr/local/bin /usr/games/bin /usr/local/share/python ~/savi_scripts/scripts
+	~/apps/adt-bundle-linux-x86_64-20140321/sdk/platform-tools
+	~/apps/depot_tools
+	$path)
 export PATH
 
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:${PYTHONPATH}
 
-
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
+
+setopt interactivecomments
+
+# Useful aliases for setting up robot environments
+source ~/savi_scripts/bash/robots.sh
