@@ -34,6 +34,8 @@ set incsearch
 set hlsearch
 " Make the K command do a dictionary lookup
 set keywordprg=dict
+" Enable modelines
+set modeline
 
 " Typos, misspellings, and shortcuts
 iab teh the

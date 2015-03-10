@@ -48,6 +48,7 @@ setopt share_history
 # Set the file used to store history
 export HISTFILE=~/.zsh_history
 export SAVEHIST=10000
+export HISTSIZE=10000
 setopt APPEND_HISTORY
 
 # Obsolete stuff
@@ -92,9 +93,18 @@ export PATH
 
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:${PYTHONPATH}
 
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
-
 setopt interactivecomments
 
 # Useful aliases for setting up robot environments
-source ~/savi_scripts/bash/robots.sh
+#source ~/savibot/savibot_sim/devel/setup.zsh
+if [ -f ~/savi_scripts/bash/robots.sh ];
+	source ~/savi_scripts/bash/robots.sh
+fi
+if [ -f /opt/ros/indigo/setup.zsh];
+	source /opt/ros/indigo/setup.zsh
+fi
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/home/tlau/apps/google-cloud-sdk/path.zsh.inc'
+# The next line enables bash completion for gcloud.
+source '/home/tlau/apps/google-cloud-sdk/completion.zsh.inc'
