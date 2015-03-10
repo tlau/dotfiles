@@ -97,10 +97,10 @@ setopt interactivecomments
 
 # Useful aliases for setting up robot environments
 #source ~/savibot/savibot_sim/devel/setup.zsh
-if [ -f ~/savi_scripts/bash/robots.sh ];
+if [ -f ~/savi_scripts/bash/robots.sh ]; then
 	source ~/savi_scripts/bash/robots.sh
 fi
-if [ -f /opt/ros/indigo/setup.zsh];
+if [ -f /opt/ros/indigo/setup.zsh ]; then
 	source /opt/ros/indigo/setup.zsh
 fi
 
@@ -108,3 +108,4 @@ fi
 source '/home/tlau/apps/google-cloud-sdk/path.zsh.inc'
 # The next line enables bash completion for gcloud.
 source '/home/tlau/apps/google-cloud-sdk/completion.zsh.inc'
+
