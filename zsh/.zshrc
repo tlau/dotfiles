@@ -65,9 +65,9 @@ if [ -f /opt/ros/indigo/setup.zsh ]; then
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
-source '/home/tlau/apps/google-cloud-sdk/path.zsh.inc'
+#source '/home/tlau/apps/google-cloud-sdk/path.zsh.inc'
 # The next line enables bash completion for gcloud.
-source '/home/tlau/apps/google-cloud-sdk/completion.zsh.inc'
+#source '/home/tlau/apps/google-cloud-sdk/completion.zsh.inc'
 
 export GITHUB_TOKEN=16a24e6d929cec810575986197736694a8fa0dc0
 
