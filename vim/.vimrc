@@ -20,7 +20,11 @@ set icon
 " Allow backspacing past the start of insert
 set backspace=2
 " Create a viminfo file (storing searches, marks, etc.) for last 50 files
-set viminfo='50
+" '50 - remember marks for up to 50 previously edited files
+" %   - save and restore the buffer list
+" :50 - save up to 50 lines of command-line history
+" /50 - save 50 searches
+set viminfo='50,%,:50,"100,/50
 " Always display status bar
 set laststatus=2
 " Try to disable annoying screen clearing at exit
