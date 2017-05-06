@@ -9,12 +9,6 @@ export LESSKEY=/home/tlau/.less
 # Filename completion
 export FIGNORE=aux
 
-<<<<<<< HEAD
-# print to molly's printer
-#export PRINTER=molly
-
-=======
->>>>>>> d9012d64360bff83f284c52e7bbc6a1f6bf2d406
 bindkey -v
 bindkey -a K history-beginning-search-backward
 bindkey -a J history-beginning-search-forward
@@ -23,11 +17,6 @@ bindkey '[A' up-history
 bindkey '[B' down-history
 bindkey  up-history
 bindkey  down-history
-<<<<<<< HEAD
-bindkey  history-incremental-pattern-search-backward
-#stty erase '^H'
-=======
->>>>>>> d9012d64360bff83f284c52e7bbc6a1f6bf2d406
 
 # Aliases
 alias ls='ls --color -F'
@@ -48,10 +37,7 @@ setopt SHARE_HISTORY
 export HISTFILE=~/.zsh_history
 export SAVEHIST=10000
 export HISTSIZE=10000
-<<<<<<< HEAD
-=======
 setopt APPEND_HISTORY
->>>>>>> d9012d64360bff83f284c52e7bbc6a1f6bf2d406
 
 # for github
 source ~/.zsh/git-prompt/zshrc.sh
