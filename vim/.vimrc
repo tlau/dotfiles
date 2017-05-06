@@ -20,7 +20,11 @@ set icon
 " Allow backspacing past the start of insert
 set backspace=2
 " Create a viminfo file (storing searches, marks, etc.) for last 50 files
-set viminfo='50
+" '50 - remember marks for up to 50 previously edited files
+" %   - save and restore the buffer list
+" :50 - save up to 50 lines of command-line history
+" /50 - save 50 searches
+set viminfo='50,%,:50,"100,/50
 " Always display status bar
 set laststatus=2
 " Try to disable annoying screen clearing at exit
@@ -34,6 +38,8 @@ set incsearch
 set hlsearch
 " Make the K command do a dictionary lookup
 set keywordprg=dict
+" Enable modelines
+set modeline
 
 " Typos, misspellings, and shortcuts
 iab teh the
@@ -112,6 +118,7 @@ autocmd FileType python       set sw=4 ts=4 sts=4 et
 autocmd bufnewfile 			*.html    	0r ~/.vim/template.html
 autocmd FileType html    	so ~/.vim/vi-mode-html
 autocmd bufenter                *.html      set sw=2 ts=2 et
+autocmd bufenter                *.css       set sw=2 ts=2 et
 " This doesn't work yet
 " autocmd BufWritePre,FileWritePre *.html		ms:1,20g/Last modification: /|normal f:lD:read !date^M:normal kJ
 
