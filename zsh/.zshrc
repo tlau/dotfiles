@@ -63,11 +63,10 @@ fi
 if [ -f /opt/ros/indigo/setup.zsh ]; then
 	source /opt/ros/indigo/setup.zsh
 fi
+if [ -f /opt/savibot/setup.zsh ]; then
+	source /opt/savibot/setup.zsh
+fi
 
-# The next line updates PATH for the Google Cloud SDK.
-#source '/home/tlau/apps/google-cloud-sdk/path.zsh.inc'
-# The next line enables bash completion for gcloud.
-#source '/home/tlau/apps/google-cloud-sdk/completion.zsh.inc'
+source ~/.zshrc-private
 
-export GITHUB_TOKEN=16a24e6d929cec810575986197736694a8fa0dc0
-
+alias qu="tmux kill-session -t quincy ; quincy"
