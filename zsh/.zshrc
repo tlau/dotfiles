@@ -30,9 +30,9 @@ setopt EXTENDED_GLOB
 
 # global history
 # Append command to history just before it is executed, not when the shell exits
-setopt inc_append_history
+setopt INC_APPEND_HISTORY
 # retrieve history file each time history is requested
-setopt share_history
+setopt SHARE_HISTORY
 # Set the file used to store history
 export HISTFILE=~/.zsh_history
 export SAVEHIST=10000
