@@ -67,6 +67,8 @@ if [ -f /opt/savibot/setup.zsh ]; then
 	source /opt/savibot/setup.zsh
 fi
 
-source ~/.zshrc-private
+if [ -f ~/.zshrc-private]; then
+	source ~/.zshrc-private
+fi
 
 alias qu="tmux kill-session -t quincy ; quincy"
