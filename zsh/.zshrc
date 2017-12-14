@@ -67,7 +67,7 @@ if [ -f /opt/savibot/setup.zsh ]; then
 	source /opt/savibot/setup.zsh
 fi
 
-if [ -f ~/.zshrc-private]; then
+if [ -f ~/.zshrc-private ]; then
 	source ~/.zshrc-private
 fi
 
