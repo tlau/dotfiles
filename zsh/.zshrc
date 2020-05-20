@@ -4,10 +4,6 @@ export VISUAL=/usr/bin/vim
 export EDITOR=/usr/bin/vim
 # Less options
 export LESS=-erMMj3
-export LESSKEY=/home/tlau/.less
-
-# Filename completion
-export FIGNORE=aux
 
 bindkey -v
 bindkey -a K history-beginning-search-backward
@@ -47,28 +43,13 @@ PROMPT='%m:%~$(git_super_status)%% '
 # Also add homebrew directories
 typeset -U path
 path=(~/bin /usr/local/bin
-	~/savi_scripts/scripts
-	~/src/bagtube/bin
 	$path)
 export PATH
 
-export PYTHONPATH=/home/tlau/savi_scripts/python:/usr/local/lib/python2.7/site-packages:${PYTHONPATH}
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:${PYTHONPATH}
 
 setopt interactivecomments
 
-# Useful aliases for setting up robot environments
-if [ -f ~/savi_scripts/bash/robots.sh ]; then
-	source ~/savi_scripts/bash/robots.sh
-fi
 if [ -f /opt/ros/indigo/setup.zsh ]; then
 	source /opt/ros/indigo/setup.zsh
 fi
-if [ -f /opt/savibot/setup.zsh ]; then
-	source /opt/savibot/setup.zsh
-fi
-
-if [ -f ~/.zshrc-private ]; then
-	source ~/.zshrc-private
-fi
-
-alias qu="tmux kill-session -t quincy ; quincy"
